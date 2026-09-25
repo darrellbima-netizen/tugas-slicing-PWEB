@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #111;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 90px;
+    background-color: #d8d8d8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   TABLE INFO
+========================= */
+
+.table-info {
+    text-align: center;
+
+    padding: 45px 20px 25px;
+}
+
+.table-info p {
+    font-size: 16px;
+}
+
+.table-info h1 {
+    font-size: 36px;
+    margin: 5px 0;
+}
+
+.table-number {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-section {
+    max-width: 900px;
+    margin: auto;
+
+    padding: 20px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+}
+
+.section-title p {
+    margin-top: 5px;
+    color: #666;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-buttons {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.category {
+    padding: 8px 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.category.active {
+    background-color: #111;
+    color: white;
+}
+
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 25px;
+}
+
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card {
+    cursor: pointer;
+}
+
+.menu-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #d8d8d8;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-info {
+    margin-top: 7px;
+}
+
+.menu-info h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.menu-info p {
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    margin-top: 50px;
+
+    background-color: #eee;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+footer p + p {
+    margin-top: 5px;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 90px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .table-info {
+        padding-top: 35px;
+    }
+
+    .table-info h1 {
+        font-size: 30px;
+    }
+
+    .menu-section {
+        padding: 20px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px 22px;
+    }
+
+    .menu-image {
+        font-size: 20px;
+    }
+
+    .menu-info h3 {
+        font-size: 15px;
+    }
+
+    .menu-info p {
+        font-size: 14px;
+    }
+
+}
